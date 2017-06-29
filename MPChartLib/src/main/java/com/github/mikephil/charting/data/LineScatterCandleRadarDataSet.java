@@ -14,6 +14,8 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
 
     protected boolean mDrawVerticalHighlightIndicator = true;
     protected boolean mDrawHorizontalHighlightIndicator = true;
+    protected boolean mDrawMaxY = true;
+
 
     /** the width of the highlight indicator lines */
     protected float mHighlightLineWidth = 0.5f;
@@ -109,4 +111,21 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     public DashPathEffect getDashPathEffectHighlight() {
         return mHighlightDashPathEffect;
     }
+    /**
+     * Returns true if the vertical highlight line goes from bottom to top, if false it goes from bottom to y value.
+     * Default: enable
+     *
+     * @return
+     */
+    public boolean ismDrawMaxY() {
+        return mDrawMaxY;
+    }
+    /**
+     * Enables / disables the vertical highlight line indicator over the Y values.
+     * @param enabled
+     */
+    public void setmDrawMaxY(boolean enabled) {
+        this.mDrawMaxY = mDrawMaxY;
+    }
+
 }

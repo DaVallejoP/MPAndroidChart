@@ -320,6 +320,24 @@ public class LineChartActivity1 extends DemoBase implements OnSeekBarChangeListe
                 // mChart.saveToGallery("title"+System.currentTimeMillis())
                 break;
             }
+            case R.id.actionToggleShowMaxY :{
+                List<ILineDataSet> sets = mChart.getData()
+                        .getDataSets();
+
+                for (ILineDataSet iSet : sets) {
+
+                    LineDataSet set = (LineDataSet) iSet;
+                    set.disableDashedHighlightLine();
+                    set.setDrawVerticalHighlightIndicator(true);
+                    set.setDrawHorizontalHighlightIndicator(false);
+                    set.setHighlightLineWidth(10);
+                    set.setHighLightColor(Color.GREEN);
+                    set.setmDrawMaxY(false);
+
+                }
+                mChart.invalidate();
+                break;
+            }
         }
         return true;
     }

@@ -61,4 +61,8 @@
         android:id="@+id/actionToggleAutoScaleMinMax"
         android:title="Toggle auto scale min/max">
     </item>
+    <item
+        android:id="@+id/actionToggleShowMaxY"
+        android:title="Toggle Show Max Y">
+    </item>
 </menu>

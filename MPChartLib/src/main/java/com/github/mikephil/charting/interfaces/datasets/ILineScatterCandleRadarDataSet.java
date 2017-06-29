@@ -32,4 +32,10 @@ public interface ILineScatterCandleRadarDataSet<T extends Entry> extends IBarLin
      * @return
      */
     DashPathEffect getDashPathEffectHighlight();
+
+    /**
+     * Returns true iif the vertical highlight line goes from bottom to top.
+     * @return
+     */
+    boolean ismDrawMaxY();
 }
