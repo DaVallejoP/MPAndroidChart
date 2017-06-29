@@ -1,7 +1,9 @@
 package com.github.mikephil.charting.renderer;
 
 import android.graphics.Canvas;
+import android.graphics.LinearGradient;
 import android.graphics.Path;
+import android.graphics.Shader;
 
 import com.github.mikephil.charting.animation.ChartAnimator;
 import com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet;
@@ -49,6 +51,7 @@ public abstract class LineScatterCandleRadarRenderer extends BarLineScatterCandl
             else {
                 mHighlightLinePath.moveTo(x, mViewPortHandler.contentTop());
             }
+            mHighlightPaint.setShader(new LinearGradient(0,y,0, mViewPortHandler.contentBottom(),set.getHighLightColor(),set.getHighLightColorGradient(), Shader.TileMode.CLAMP));
             mHighlightLinePath.lineTo(x, mViewPortHandler.contentBottom());
 
             c.drawPath(mHighlightLinePath, mHighlightPaint);

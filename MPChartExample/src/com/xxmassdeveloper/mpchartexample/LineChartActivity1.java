@@ -332,6 +332,7 @@ public class LineChartActivity1 extends DemoBase implements OnSeekBarChangeListe
                     set.setDrawHorizontalHighlightIndicator(false);
                     set.setHighlightLineWidth(10);
                     set.setHighLightColor(Color.GREEN);
+                    set.setHighLightColorGradient(Color.BLUE);
                     set.setmDrawMaxY(false);
 
                 }
