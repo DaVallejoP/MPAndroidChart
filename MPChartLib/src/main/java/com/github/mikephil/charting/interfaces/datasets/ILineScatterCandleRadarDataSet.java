@@ -38,4 +38,6 @@ public interface ILineScatterCandleRadarDataSet<T extends Entry> extends IBarLin
      * @return
      */
     boolean ismDrawMaxY();
+    int getMarginTop();
+    int getMarginBottom();
 }

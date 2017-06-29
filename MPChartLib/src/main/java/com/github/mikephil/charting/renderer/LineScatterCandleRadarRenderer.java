@@ -46,13 +46,13 @@ public abstract class LineScatterCandleRadarRenderer extends BarLineScatterCandl
             // create vertical path
             mHighlightLinePath.reset();
             if(set.ismDrawMaxY()){
-                mHighlightLinePath.moveTo(x, y);
+                mHighlightLinePath.moveTo(x, y + set.getMarginTop());
             }
             else {
-                mHighlightLinePath.moveTo(x, mViewPortHandler.contentTop());
+                mHighlightLinePath.moveTo(x, mViewPortHandler.contentTop() + set.getMarginTop());
             }
             mHighlightPaint.setShader(new LinearGradient(0,y,0, mViewPortHandler.contentBottom(),set.getHighLightColor(),set.getHighLightColorGradient(), Shader.TileMode.CLAMP));
-            mHighlightLinePath.lineTo(x, mViewPortHandler.contentBottom());
+            mHighlightLinePath.lineTo(x, mViewPortHandler.contentBottom() - set.getMarginBottom());
 
             c.drawPath(mHighlightLinePath, mHighlightPaint);
         }

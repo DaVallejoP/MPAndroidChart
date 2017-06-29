@@ -16,6 +16,9 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
     protected boolean mDrawHorizontalHighlightIndicator = true;
     protected boolean mDrawMaxY = true;
 
+    protected int marginTop = 0;
+    protected int marginBottom = 0;
+
 
     /** the width of the highlight indicator lines */
     protected float mHighlightLineWidth = 0.5f;
@@ -126,6 +129,24 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
      */
     public void setmDrawMaxY(boolean enabled) {
         this.mDrawMaxY = mDrawMaxY;
+    }
+
+    @Override
+    public int getMarginTop() {
+        return marginTop;
+    }
+
+    public void setMarginTop(int marginTop) {
+        this.marginTop = marginTop;
+    }
+
+    @Override
+    public int getMarginBottom() {
+        return marginBottom;
+    }
+
+    public void setMarginBottom(int marginBottom) {
+        this.marginBottom = marginBottom;
     }
 
 }
